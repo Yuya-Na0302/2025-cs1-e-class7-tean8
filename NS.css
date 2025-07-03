@@ -1,7 +1,11 @@
-h1{background-color: rgb(8, 141, 132);
+h1{background-color: rgb(100, 180, 190);
 
 }
 
-h3{background-color: blueviolet;}
+h3{background-color: rgb(115, 180, 225);
+    
+}
 
-p{background-color: rgb(168, 109, 223);}
+strong{ border-bottom: solid 3px;
+
+}
