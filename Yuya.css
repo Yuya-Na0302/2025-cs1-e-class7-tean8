@@ -1,7 +1,9 @@
+
 body {
-  background: #faf8f2;
+  background-color: #fff4f4; /* 上品な薄桜色 */
   color: #222;
 }
+
 
 h1, h2 {
   color: #a22;
@@ -42,6 +44,34 @@ details summary {
   padding: 0.35em 0.7em;
   border-radius: 4px;
 }
+/* 浅草苺座のイラスト横並び用のラッパー */
+.ichigoza-wrap {
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+  margin-bottom: 12px; /* hrとの間隔確保 */
+}
+
+/* 説明文 */
+.ichigoza-text {
+  flex: 1 1 0;
+  min-width: 0;
+}
+
+/* イラスト調整 */
+.ichigoza-img {
+  max-width: 120px;     /* PC向けの最大サイズ */
+  width: 23vw;          /* 画面幅に応じ調整 */
+  min-width: 64px;      /* すごく小さな端末でもつぶれにくい */
+  height: auto;
+  margin-top: 0.2em;    /* 文字の1行目と揃える */
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(180,50,50,0.10);
+}
+
+
+
+
 body {
   max-width: 900px;
   margin: 0 auto;
@@ -84,5 +114,58 @@ hr {
   img {
     margin: 5px 0;
     max-width: 98vw;
+  }
+}
+/* モバイル時: フレックス→ブロックに崩れ、イラストが説明文の上に来る */
+@media (max-width: 600px) {
+  .ichigoza-wrap {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.5em;
+  }
+  .ichigoza-img {
+    max-width: 80vw;
+    min-width: 48px;
+    margin: 0 auto 0.5em auto;
+    display: block;
+  }
+  .ichigoza-text {
+    font-size: 15px;
+  }
+}
+.mihatodou-wrap {
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+  margin-bottom: 12px;
+}
+.mihatodou-text {
+  flex: 1 1 0;
+  min-width: 0;
+}
+.mihatodou-img {
+  max-width: 120px;
+  width: 23vw;
+  min-width: 64px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(180,50,50,0.10);
+}
+
+/* スマホ対応 */
+@media (max-width: 600px) {
+  .mihatodou-wrap {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.5em;
+  }
+  .mihatodou-img {
+    max-width: 80vw;
+    min-width: 48px;
+    margin: 0 auto 0.5em auto;
+    display: block;
+  }
+  .mihatodou-text {
+    font-size: 15px;
   }
 }
