@@ -59,8 +59,8 @@ img.kanto {
 /* 他の画像も同様にtop位置を調整してください */
 img.shachi {
     position: absolute;
-    top: calc(60px + 78% - 100px); /* 60pxはナビバーの高さ、78%は元の位置、100pxは画像自身の高さの半分（例） */
-    left: 70%;
+    top: calc(60px + 98% - 100px); /* 60pxはナビバーの高さ、78%は元の位置、100pxは画像自身の高さの半分（例） */
+    left: 65%;
     width: 200px;
     height: auto;
     transform: translate(-50%, 0%); /* -100% を 0% に変更 */
@@ -79,7 +79,7 @@ img.kaminari {
 
 img.chuka {
     position: absolute;
-    top: calc(60px + 60% - 100px);
+    top: calc(60px + 70% - 100px);
     left: 45%;
     width: 200px;
     height: auto;
