@@ -69,7 +69,7 @@ img.shachi {
 
 img.kaminari {
     position: absolute;
-    top: calc(200px + 50% - 100px);
+    top: calc(170px + 50% - 100px);
     left: 45%;
     width: 200px;
     height: auto;
@@ -79,8 +79,8 @@ img.kaminari {
 
 img.chuka {
     position: absolute;
-    top: calc(60px + 70% - 100px);
-    left: 45%;
+    top: calc(130px + 70% - 100px);
+    left: 42%;
     width: 200px;
     height: auto;
     transform: translate(-50%, 0%);
