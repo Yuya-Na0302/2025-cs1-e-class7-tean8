@@ -1,0 +1,181 @@
+/* ナビゲーションバー全体のスタイル */
+.main-nav {
+    width: 100%;             /* 幅を画面いっぱいに */
+    background-color: #333;  /* ダークグレーの背景色 */
+    padding: 10px 0;         /* 上下に余白 */
+    position: fixed;         /* 画面に固定表示 */
+    top: 0;                  /* 画面の最上部に配置 */
+    left: 0;                 /* 画面の左端に配置 */
+    z-index: 1000;           /* 他の要素より手前に表示（最も手前） */
+}
+
+/* リスト（ul）のスタイル */
+.main-nav ul {
+    list-style: none; /* リストの点（マーカー）を削除 */
+    margin: 0;        /* 外側の余白をなくす */
+    padding: 0;       /* 内側の余白をなくす */
+    text-align: center; /* リンクを中央揃えにする */
+}
+
+/* 各リストアイテム（li）のスタイル */
+.main-nav ul li {
+    display: inline-block; /* リンクを横並びにする */
+    margin: 0 15px;      /* 左右に余白 */
+}
+
+/* リンク（a）自体のスタイル */
+.main-nav ul li a {
+    color: white;           /* 文字色を白に */
+    text-decoration: none;  /* 下線を消す */
+    font-weight: bold;      /* 太字にする */
+    padding: 5px 10px;      /* クリックできる範囲を広げる */
+    transition: background-color 0.3s ease; /* ホバー時の滑らかな変化 */
+}
+
+/* リンクにマウスを乗せた時のスタイル */
+.main-nav ul li a:hover {
+    background-color: #555; /* 背景色を少し濃くする */
+    border-radius: 5px;     /* 角を丸くする */
+}
+
+/* Bodyのパディング調整：ナビゲーションバーが固定されるため */
+body {
+    padding-top: 60px; /* ナビゲーションバーの高さ（例: 40px+上下10pxのpadding=60px）分、bodyの上部に余白を作る */
+    /* ここに他のbodyスタイルがあれば追加 */
+}
+
+/* 既存の画像やコンテンツの位置調整 */
+/* ナビゲーションバーの高さ分、下にずらして重ならないようにする */
+img.kanto {
+    position: absolute;
+    top: 60px; /* bodyのpadding-topと同じ値に設定 */
+    left: 50%;
+    width: 1000px;
+    height: auto;
+    transform: translate(-50%, 0%); /* Y方向のtransformを0%にする */
+    z-index: 1;
+}
+
+/* 他の画像も同様にtop位置を調整してください */
+img.shachi {
+    position: absolute;
+    top: calc(60px + 78% - 100px); /* 60pxはナビバーの高さ、78%は元の位置、100pxは画像自身の高さの半分（例） */
+    left: 70%;
+    width: 200px;
+    height: auto;
+    transform: translate(-50%, 0%); /* -100% を 0% に変更 */
+    z-index: 1;
+}
+body {
+    font-family: 'Yu Gothic', 'Meiryo', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f6f9fa;
+    color: #222;
+}
+
+.container {
+    max-width: 700px;
+    margin: 40px auto;
+    padding: 24px;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 0 12px rgba(120,160,180,0.12);
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+h1 {
+    background-color: rgb(100, 180, 190);
+    color: #fff;
+    padding: 16px;
+    border-radius: 8px;
+    font-size: 2.3em;
+    margin-bottom: 0.2em;
+    letter-spacing: 0.1em;
+}
+
+.subtitle {
+    color: #3c4858;
+    font-size: 1.1em;
+    margin-top: 0.2em;
+    margin-bottom: 0.5em;
+}
+
+.section {
+    margin-bottom: 36px;
+}
+
+h3 {
+    background-color: rgb(115, 180, 225);
+    color: #fff;
+    padding: 12px;
+    border-radius: 6px;
+    font-size: 1.3em;
+    margin-bottom: 0.8em;
+}
+
+.card-list {
+    list-style-position: inside;
+    padding-left: 0;
+    margin: 0;
+}
+
+.card {
+    background: #e6f4fc;
+    margin-bottom: 16px;
+    padding: 16px 18px;
+    border-radius: 10px;
+    box-shadow: 0 1px 4px rgba(80, 130, 180, 0.05);
+    transition: background 0.25s;
+}
+.card:last-child {
+    margin-bottom: 0;
+}
+
+.card:hover {
+    background: #d2f0fa;
+}
+
+.card strong {
+    display: inline-block;
+    font-size: 1.1em;
+    color: #207091;
+    border-bottom: solid 3px #0a7dbc;
+    padding-bottom: 2px;
+    margin-bottom: 8px;
+}
+
+.card p {
+    margin: 8px 0 0 0;
+    font-size: 1em;
+    color: #333;
+    line-height: 1.6;
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 12px;
+        border-radius: 0;
+    }
+    h1, h3 {
+        font-size: 1.2em;
+        padding: 10px;
+    }
+    .card {
+        padding: 10px 10px;
+    }
+}
+
+.card-img {
+    width: 180px;        
+    height: auto;         
+    display: block;
+    margin-bottom: 8px;   
+    border-radius: 10px;  
+    box-shadow: 0 0 6px rgba(120,160,180,0.12); 
+    object-fit: cover;    
+}
