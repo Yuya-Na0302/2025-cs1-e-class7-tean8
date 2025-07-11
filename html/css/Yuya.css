@@ -67,10 +67,34 @@ img.shachi {
     z-index: 1;
 }
 body {
-  background-color: #fff4f4; /* 上品な薄桜色 */
-  color: #222;
+  background-image: url("https://www.transparenttextures.com/patterns/wood-pattern.png");
+  background-repeat: repeat;
+  background-color: #fff4f4;
 }
-
+.main-header {
+  background: 
+    linear-gradient(90deg, #fff4f4 60%, #ffe5c7 100%);
+  padding: 20px 0 15px 0;
+  border-bottom: 2px solid #edc988;
+}
+.logo-area {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+.header-logo {
+  width: 60px;
+  border-radius: 20%;
+  margin-right: 10px;
+}
+.site-title {
+  font-family: "Yu Mincho", "Hiragino Mincho Pro", serif;
+  font-size: 2em;
+  color: #c34030;
+  letter-spacing: 0.15em;
+  margin: 0;
+}
 
 h1, h2 {
   color: #a22;
@@ -139,12 +163,7 @@ details summary {
 
 
 
-body {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 24px 12px;
-  background: #faf8f2;
-}
+
 
 img {
   max-width: 50%;
