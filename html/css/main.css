@@ -69,7 +69,7 @@ img.shachi {
 
 img.kaminari {
     position: absolute;
-    top: calc(60px + 50% - 100px);
+    top: calc(200px + 50% - 100px);
     left: 45%;
     width: 200px;
     height: auto;
